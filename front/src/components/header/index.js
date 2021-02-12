@@ -6,7 +6,7 @@ import './header.css'
 const links = [
     {local : '/jogos', texto : 'Jogos'},
     {local : '/nossas-lojas', texto : 'Nossas Lojas'},
-    {local : '/contato', texto : 'Contato'}
+    {local : '/cadastroj', texto : 'Cadastrar jogo'}
 ]
 
 const mapeamento = links.map((link) => <li key={link.local} className="nav-item"><Link className="nav-link text-light" to={link.local}>{link.texto}</Link></li>)
@@ -17,7 +17,7 @@ export default function Header() {
                 <div className="container-fluid">
                     <Link to="/home"><img className="navbar-brand" src={SteamIcon} alt="Home page" /></Link>
                     <button className="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler p-2" style={{color: 'white', padding: '5px', fontWeight: 'bolder'}}>MENU</span>
                     </button>    
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">   
                         <div className="navbar-nav">

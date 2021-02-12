@@ -6,6 +6,7 @@ import loading from './img/icon/loading.png'
 
 import ViewHome from './pages/home'
 import ViewJogos from './pages/jogos'
+import ViewCadastroJ from './pages/cadastroj'
 const LazyHeader = lazy(()=> import('./components/header'))
 const LazyMain = lazy(()=> import('./components/main'))
 
@@ -21,6 +22,7 @@ function App() {
             <Switch>
               <Route path="/home" component={ViewHome} />
               <Route path="/jogos" component={ViewJogos} />
+              <Route path="/cadastroj" component={ViewCadastroJ} />
             </Switch>
           </LazyMain>
         </Suspense>

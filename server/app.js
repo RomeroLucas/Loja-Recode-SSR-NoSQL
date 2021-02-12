@@ -48,7 +48,7 @@ app.delete('/delprod', (req, res, next)=> {
     conn(
       (error, result)=> {
         let jogo = {id: req.body.id}
-        result.db('lojarecode').collection('produtos').deleteOne(jogo, (error, jogo)=> {
+        result.db('lojarecode').collection('produtos').deleteMany(jogo, (error, jogo)=> {
           res.json({msg: "Jogo excluido"})
         })
       }
