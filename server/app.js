@@ -1,38 +1,58 @@
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
 const cors = require('cors')
 
 app.use(express.json())
 app.use(cors())
 app.use(express.static('./build'))
 
-// CONEXAO
-mongoose.connect("mongodb://localhost/lojarecode",{
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+function conn(funcao) {
+    MongoClient.connect(url, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    }, funcao);
+}
+
+app.use('/prod', (req, res, next)=>{
+  conn(
+    (error, result)=> {
+      const db = result.db("lojarecode");
+      db.collection("produtos").find().toArray((error, result)=> {
+        res.json(result)
+    })
+})
 })
 
-//MODEL
-const Produtos = new Schema({
-    id : {type: Number},
-    nome : {type: String},
-    img : {type: String},
-    valor : {type: Number},
-    categoria : {type: String},
-    localimg : {type: String}
+app.post('/cadprod', (req, res, next) => {
+  let dados = {
+      id: req.body.id,
+      nome: req.body.nome,
+      img: req.body.img,
+      valor: req.body.valor,
+      categoria: req.body.categoria,
+      localimg: req.body.localimg
+  }
+  conn(
+    (error, result)=> {
+      result.db('lojarecode').collection('produtos').insert(dados, (error, inserido)=> {
+        res.json({mensagem: "Inserido com sucesso!", jogo: inserido})
+      })
+    }
+  )
 })
-mongoose.model("produtos", Produtos);
 
-//CONTROLLER
-const Collection = mongoose.model('produtos')
-
-app.get('/prod', async (req, res, next)=> {
-  const response = await Collection.find()
-  const dados = await response
-
-  res.json(dados)
+app.delete('/delprod', (req, res, next)=> {
+    conn(
+      (error, result)=> {
+        let jogo = {id: req.body.id}
+        result.db('lojarecode').collection('produtos').deleteOne(jogo, (error, jogo)=> {
+          res.json({msg: "Jogo excluido"})
+        })
+      }
+  )
 })
 
 
