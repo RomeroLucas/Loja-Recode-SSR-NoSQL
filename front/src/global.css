@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+
+    --font-s: 14px;
+    --font-m: 18px;
+    --font-l: 22px;
+
+    --primary-color: #171a21;
+    --secondary-color: #2a475e;
+    --font-color: #c7d5e0;
+    --font-color-alt: #1b2838;
+}

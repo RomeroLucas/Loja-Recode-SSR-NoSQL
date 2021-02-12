@@ -1,0 +1,54 @@
+.card {
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+    padding: 0px;
+    margin: 5px;
+    width: 22%;
+}
+
+.card img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-titulo {
+    color: var(--font-color-alt);
+    font-weight: 500;
+    font-size: var(--font-m);
+    padding-left: 5px;
+}
+
+.card-valor {
+    color: var(--font-color-alt);
+    font-weight: 400;
+    font-size: var(--font-s);
+    padding-left: 5px;
+    text-align: center;
+    font-weight: bolder;
+}
+.desconto {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.card-categoria {
+    color: var(--font-color-alt);
+    font-weight: 400;
+    font-size: var(--font-s);
+    padding-left: 5px;
+}
+
+.card:hover ~ .card {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        border-radius: 5px;
+        transition: .5s;
+        cursor: pointer;
+        padding: 0px;
+        margin: 5px;
+        width: 40%;
+    }
+}
