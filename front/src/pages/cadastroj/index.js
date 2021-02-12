@@ -29,7 +29,7 @@ export default function Cadastroj() {
             'Content-Type': 'application/json',
             'Authorization': 'JWT fefege...'
         }}))
-        console.log(formData)
+        alert(`Jogo ${formData} inserido com sucesso!`)
     }
 
 

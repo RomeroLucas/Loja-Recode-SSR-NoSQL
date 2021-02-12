@@ -4,7 +4,6 @@ import axios from 'axios'
 
 import './jogos.css'
 
-
 import {lazy, Suspense} from 'react'
 import loading from '../../img/icon/loading.png'
 
@@ -13,7 +12,7 @@ const LazyCards = lazy(()=> import('../../components/cards'))
 
 export default function Jogos() {
     const produtosreducer = useSelector(state => state.produtos.dados)
-    const [prod, setProd] = useState(produtosreducer)
+    const [prod, setProd] = useState([])
     const [filtro, setFiltro] = useState(false)
     const dispatch = useDispatch()
 
@@ -22,11 +21,12 @@ export default function Jogos() {
         setFiltro(value)
     }
 
-    const conn = () => {
-        axios.get('http://localhost:4000/prod')
-        .then(res => dispatch({type: 'EXIBIR', payload: res.data}))
-    }
-    useEffect(conn, [produtosreducer])
+    const conn = async ()=> await axios.get('http://localhost:4000/prod')
+    useEffect(async ()=> {
+        let response = await conn()
+        await dispatch({type: 'EXIBIR', payload: response.data})
+        await setProd(produtosreducer)
+    }, [produtosreducer])
 
     return (
         <section>
