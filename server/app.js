@@ -16,7 +16,7 @@ function conn(funcao) {
     }, funcao);
 }
 
-app.use('/prod', (req, res, next)=>{
+app.get('/prod', (req, res, next)=>{
   conn(
     (error, result)=> {
       const db = result.db("lojarecode");
