@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc5f"
+  },
+  "id": 1,
+  "nome": "Squad",
+  "img": "squad.jpg",
+  "valor": 78.5,
+  "categoria": "fps",
+  "localimg": "squad"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc60"
+  },
+  "id": 2,
+  "nome": "Among Us",
+  "img": "among.jpg",
+  "valor": 10.8,
+  "categoria": "familia",
+  "localimg": "among"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc61"
+  },
+  "id": 3,
+  "nome": "Cyberpunk 2077",
+  "img": "cyberpunk.jpg",
+  "valor": 100,
+  "categoria": "fps",
+  "localimg": "cyberpunk"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc62"
+  },
+  "id": 4,
+  "nome": "Red Dead Redemption",
+  "img": "reddead.jpg",
+  "valor": 230,
+  "categoria": "aventura",
+  "localimg": "reddead"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc63"
+  },
+  "id": 5,
+  "nome": "EA FIFA21",
+  "img": "fifa.jpg",
+  "valor": 160.13,
+  "categoria": "esportes",
+  "localimg": "fifa"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc64"
+  },
+  "id": 6,
+  "nome": "Fall Guys",
+  "img": "fall.jpg",
+  "valor": 37,
+  "categoria": "familia",
+  "localimg": "fall"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc65"
+  },
+  "id": 7,
+  "nome": "Nier:Automata",
+  "img": "nier.jpg",
+  "valor": 107,
+  "categoria": "aventura",
+  "localimg": "nier"
+},{
+  "_id": {
+    "$oid": "60142b669134f5167c79cc66"
+  },
+  "id": 8,
+  "nome": "STAR WARS: Squadrons",
+  "img": "star.jpg",
+  "valor": 150,
+  "categoria": "aventura",
+  "localimg": "star"
+},{
+  "_id": {
+    "$oid": "6026ecd5fbe0bc53281d4de4"
+  },
+  "id": 20,
+  "nome": "Valorant",
+  "img": "squad.jpg",
+  "valor": "00",
+  "categoria": "fps",
+  "localimg": "squad"
+},{
+  "_id": {
+    "$oid": "6026ed1ffbe0bc53281d4de5"
+  },
+  "id": 20,
+  "nome": "Naruto 2",
+  "img": "fall.jpg",
+  "valor": "80",
+  "categoria": "aventura",
+  "localimg": "fall"
+},{
+  "_id": {
+    "$oid": "6026f8e2762c08106959b393"
+  },
+  "id": 20,
+  "nome": "GTA",
+  "img": "cyberpunk.jpg",
+  "valor": "90",
+  "categoria": "aventura",
+  "localimg": "cyberpunk"
+},{
+  "_id": {
+    "$oid": "6026fb4f775f9e1518a36dc5"
+  },
+  "id": 20,
+  "nome": "The sims",
+  "img": "fall.jpg",
+  "valor": "150",
+  "categoria": "familia",
+  "localimg": "fall"
+}]
